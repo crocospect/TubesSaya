@@ -8,40 +8,28 @@
  *
  * @author NANDHA
  */
-public class dokter {
+public class dokter extends orang {
 
-    private String nama_dok;
     private String spesialis;
-    private String id_dok;
 
-    public dokter(String nama_dok, String spesialis, String id_dok) {
-        this.nama_dok = nama_dok;
+    public dokter(String spesialis, String nama, int usia, String jns_kelamin, String pekerjaan, String alamat, String id, int nomorhp) {
+        super(nama, usia, jns_kelamin, pekerjaan, alamat, id, nomorhp);
         this.spesialis = spesialis;
-        this.id_dok = id_dok;
-    }
-
-    public void setNama_dok(String nama_dok) {
-        this.nama_dok = nama_dok;
     }
 
     public void setSpesialis(String spesialis) {
         this.spesialis = spesialis;
     }
 
-    public void setId_dok(String id_dok) {
-        this.id_dok = id_dok;
-    }
-
-    public String getNama_dok() {
-        return nama_dok;
-    }
-
     public String getSpesialis() {
         return spesialis;
     }
 
-    public String getId_dok() {
-        return id_dok;
+    @Override
+    public void display() {
+        System.out.println("ID Dokter   : " + getId());
+        System.out.println("Nama Dokter : " + getNama());
+        System.out.println("");
     }
 
 }
