@@ -9,6 +9,7 @@
  * @author NANDHA
  */
 public class dokter {
+
     private String nama_dok;
     private String spesialis;
     private String id_dok;
@@ -30,7 +31,7 @@ public class dokter {
     public void setId_dok(String id_dok) {
         this.id_dok = id_dok;
     }
-    
+
     public String getNama_dok() {
         return nama_dok;
     }
@@ -42,6 +43,5 @@ public class dokter {
     public String getId_dok() {
         return id_dok;
     }
-    
-    
+
 }
