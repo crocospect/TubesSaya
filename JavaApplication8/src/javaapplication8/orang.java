@@ -11,79 +11,30 @@ package javaapplication8;
  * @author NANDHA
  */
 public abstract class orang {
- private String nama;
+    private String nama, alamat;
     private int usia;
-    private String jns_kelamin;
-    private String pekerjaan;
-    private String alamat;
-    private long id;
-    private long nomorhp; 
+    private long nomor;
 
-    public orang(String nama, int usia, String jns_kelamin, String pekerjaan, 
-            String alamat, long id, long nomorhp) {
+    public orang(String nama, String alamat, int usia, long nomor) {
         this.nama = nama;
-        this.usia = usia;
-        this.jns_kelamin = jns_kelamin;
-        this.pekerjaan = pekerjaan;
         this.alamat = alamat;
-        this.id = id;
-        this.nomorhp = nomorhp;
-    }
-
-    public void setNama(String nama) {
-        this.nama = nama;
-    }
-
-    public void setUsia(int usia) {
         this.usia = usia;
-    }
-
-    public void setJns_kelamin(String jns_kelamin) {
-        this.jns_kelamin = jns_kelamin;
-    }
-
-    public void setPekerjaan(String pekerjaan) {
-        this.pekerjaan = pekerjaan;
-    }
-
-    public void setAlamat(String alamat) {
-        this.alamat = alamat;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public void setNomorhp(long nomorhp) {
-        this.nomorhp = nomorhp;
+        this.nomor = nomor;
     }
 
     public String getNama() {
         return nama;
     }
 
-    public int getUsia() {
-        return usia;
-    }
-
-    public String getJns_kelamin() {
-        return jns_kelamin;
-    }
-
-    public String getPekerjaan() {
-        return pekerjaan;
-    }
-
     public String getAlamat() {
         return alamat;
     }
 
-    public long getId() {
-        return id;
+    public int getUsia() {
+        return usia;
     }
 
-    public long getNomorhp() {
-        return nomorhp;
+    public long getNomor() {
+        return nomor;
     }
-    public abstract void display();
 }

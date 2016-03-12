@@ -12,29 +12,38 @@ import java.util.ArrayList;
  * @author Raka
  */
 public class PasienInap {
-    private pasien pas;
-    private dokter dok;
-    private ArrayList<String> diagnosa;
 
-    public PasienInap(pasien pas, dokter dok) {
-        diagnosa = new ArrayList<String>();
-        this.pas = pas;
-        this.dok = dok;
+    private pasien p;
+    private dokter d;
+    private ArrayList<String> diagnosa = new ArrayList();
+    private int numOfDiagnosa = 0;
+
+    public long getId(){
+        return this.p.getId();
     }
-
+    public PasienInap(pasien p, dokter d) {
+        this.p = p;
+        this.d = d;
+    }
+    
     public void setDokter(dokter d) {
-        this.dok = d;
+        this.d = d;
     }
 
     public void addDiagnosa(String d) {
+        if (numOfDiagnosa < diagnosa.size()) {
             diagnosa.add(d);
+            System.out.println("Diagnosa ditambah");
+        } else {
+            System.out.println("Diagnosa penuh");
+        }
     }
-
-    public pasien getPasienInap() {
-        return pas;
+    
+    public String getDiagnosa(int indeks){
+        return diagnosa.get(indeks);
     }
-
-    public ArrayList<String> getDiagnosa() {
-        return diagnosa;
+    
+    public void deleteDiagnosa(int indeks){
+        diagnosa.remove(indeks);
     }
 }
