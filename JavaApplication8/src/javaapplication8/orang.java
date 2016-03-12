@@ -11,15 +11,16 @@ package javaapplication8;
  * @author NANDHA
  */
 public abstract class orang {
-    private String nama;
+ private String nama;
     private int usia;
     private String jns_kelamin;
     private String pekerjaan;
     private String alamat;
-    private String id;
-    private String nomorhp; 
+    private long id;
+    private long nomorhp; 
 
-    public orang(String nama, int usia, String jns_kelamin, String pekerjaan, String alamat, String id, String nomorhp) {
+    public orang(String nama, int usia, String jns_kelamin, String pekerjaan, 
+            String alamat, long id, long nomorhp) {
         this.nama = nama;
         this.usia = usia;
         this.jns_kelamin = jns_kelamin;
@@ -49,15 +50,11 @@ public abstract class orang {
         this.alamat = alamat;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    /**
-     *
-     * @param nomorhp
-     */
-    public void setNomorhp(String nomorhp) {
+    public void setNomorhp(long nomorhp) {
         this.nomorhp = nomorhp;
     }
 
@@ -81,13 +78,12 @@ public abstract class orang {
         return alamat;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public String getNomorhp() {
+    public long getNomorhp() {
         return nomorhp;
     }
-    
     public abstract void display();
 }

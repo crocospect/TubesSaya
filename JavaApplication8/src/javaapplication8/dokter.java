@@ -18,7 +18,8 @@ public class dokter extends orang {
 
     private String spesialis;
 
-    public dokter(String spesialis, String nama, int usia, String jns_kelamin, String pekerjaan, String alamat, String id, String nomorhp) {
+    public dokter(String spesialis, String nama, int usia, String jns_kelamin, 
+            String pekerjaan, String alamat, long id, long nomorhp) {
         super(nama, usia, jns_kelamin, pekerjaan, alamat, id, nomorhp);
         this.spesialis = spesialis;
     }
@@ -31,7 +32,6 @@ public class dokter extends orang {
         return spesialis;
     }
 
-    @Override
     public void display() {
         System.out.println("ID Dokter     : " + getId());
         System.out.println("Nama Dokter   : " + getNama());
@@ -42,5 +42,6 @@ public class dokter extends orang {
         System.out.println("Spesialis     : "+ getSpesialis());
         System.out.println("");
     }
+
 
 }
