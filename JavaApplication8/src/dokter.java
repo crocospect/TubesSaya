@@ -8,6 +8,7 @@
  *
  * @author NANDHA
  */
+// INI DOKTER YAA
 public class dokter extends orang {
 
     private String spesialis;
