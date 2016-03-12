@@ -23,16 +23,11 @@ public class PasienInap {
     }
 
     public void setDokter(dokter d) {
-        //this.dok = new dokter(); kak, bingung disini
-
+        this.dok = d;
     }
 
     public void addDiagnosa(String d) {
-        for (int i = 0; i < diagnosa.size(); i++) {
             diagnosa.add(d);
-            break;
-        }
-
     }
 
     public pasien getPasienInap() {
@@ -42,9 +37,4 @@ public class PasienInap {
     public ArrayList<String> getDiagnosa() {
         return diagnosa;
     }
-
-    public void RemovePasienInap() {
-        
-    }
-
 }
