@@ -16,7 +16,7 @@ public class PasienInap {
     private dokter dok;
     private ArrayList<String> diagnosa;
 
-    public PasienInap(pasien pas, dokter dok, ArrayList<String> diagnosa) {
+    public PasienInap(pasien pas, dokter dok) {
         diagnosa = new ArrayList<String>();
         this.pas = pas;
         this.dok = dok;
