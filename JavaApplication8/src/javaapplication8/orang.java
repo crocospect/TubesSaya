@@ -17,9 +17,9 @@ public abstract class orang {
     private String pekerjaan;
     private String alamat;
     private String id;
-    private int nomorhp; 
+    private String nomorhp; 
 
-    public orang(String nama, int usia, String jns_kelamin, String pekerjaan, String alamat, String id, int nomorhp) {
+    public orang(String nama, int usia, String jns_kelamin, String pekerjaan, String alamat, String id, String nomorhp) {
         this.nama = nama;
         this.usia = usia;
         this.jns_kelamin = jns_kelamin;
@@ -53,7 +53,11 @@ public abstract class orang {
         this.id = id;
     }
 
-    public void setNomorhp(int nomorhp) {
+    /**
+     *
+     * @param nomorhp
+     */
+    public void setNomorhp(String nomorhp) {
         this.nomorhp = nomorhp;
     }
 
@@ -81,7 +85,7 @@ public abstract class orang {
         return id;
     }
 
-    public int getNomorhp() {
+    public String getNomorhp() {
         return nomorhp;
     }
     
