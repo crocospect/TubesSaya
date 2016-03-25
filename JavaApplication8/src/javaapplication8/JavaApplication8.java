@@ -31,6 +31,7 @@ public class JavaApplication8 {
         System.out.println("3. Cari Pasien");
         System.out.println("4. Lihat Daftar Pasien");
         System.out.println("5. Hapus Data Pasien Inap");
+        System.out.println("6. EXIT");
         System.out.print("Masukkan inputan ");
         pilih = input.nextInt();
         switch (pilih) {
@@ -205,6 +206,10 @@ public class JavaApplication8 {
                 if(pil_lan.equals("T"))
                     lanjut=false;
                 break;
+            }
+            case 6: {
+                   System.exit(0);
+            
             }
         }
     }
