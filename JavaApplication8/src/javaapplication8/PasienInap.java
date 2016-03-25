@@ -32,8 +32,8 @@ public class PasienInap {
     }
 
     public void addDiagnosa(String d) {
-        
-            diagnosa.add(d);    
+
+        diagnosa.add(d);
     }
 
     public String getDiagnosa(int indeks) {

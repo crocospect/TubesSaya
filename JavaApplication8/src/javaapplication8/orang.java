@@ -5,19 +5,20 @@ package javaapplication8;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author NANDHA
  */
 public abstract class orang {
+
     private String nama, alamat;
     private int usia;
     private long nomor;
 
-    public orang(String nama){
+    public orang(String nama) {
         this.nama = nama;
     }
+
     public orang(String nama, String alamat, int usia, long nomor) {
         this.nama = nama;
         this.alamat = alamat;

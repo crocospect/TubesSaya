@@ -12,14 +12,15 @@ import java.util.ArrayList;
  * @author Crocospect
  */
 public class Ruangan {
+
     private ArrayList<PasienInap> daftarPasien = new ArrayList();
     private String nama;
 
     public Ruangan(String nama) {
         this.nama = nama;
     }
-    
-    public void tambahPasienInap(pasien p, dokter d){
+
+    public void tambahPasienInap(pasien p, dokter d) {
         PasienInap x = new PasienInap(p, d);
         daftarPasien.add(x);
     }
@@ -34,40 +35,41 @@ public class Ruangan {
 //    public PasienInap getPasienInap(int indeks){
 //        return daftarPasien.get(indeks);
 //    }
-    
-    public PasienInap getPasienInap(long id){
+
+    public PasienInap getPasienInap(long id) {
         int i = 0;
         for (int j = 0; j < daftarPasien.size(); j++) {
-            if (daftarPasien.get(j).getId()==id) {
-                i=j;
+            if (daftarPasien.get(j).getId() == id) {
+                i = j;
                 break;
             }
         }
         return daftarPasien.get(i);
     }
-    
-    public void removePasienInap(long id ){
+
+    public void removePasienInap(long id) {
         int i = 0;
         for (int j = 0; j < daftarPasien.size(); j++) {
-            if (daftarPasien.get(j).getId()==id) {
-                i=j;
+            if (daftarPasien.get(j).getId() == id) {
+                i = j;
                 break;
             }
         }
         daftarPasien.remove(i);
     }
-    
-    public void display (){
-        System.out.println("Ruangan : "+nama);
+
+    public void display() {
+        System.out.println("Ruangan : " + nama);
     }
 
     public ArrayList<PasienInap> getDaftarPasien() {
         return daftarPasien;
     }
-    public void diplay_pasien(){
+
+    public void diplay_pasien() {
         int i = 0;
         for (int j = 0; j < daftarPasien.size(); j++) {
             daftarPasien.get(j).display();
         }
-        }
-    }   
+    }
+}
