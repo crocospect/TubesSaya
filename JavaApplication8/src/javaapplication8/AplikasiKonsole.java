@@ -6,14 +6,13 @@
 package javaapplication8;
 
 import java.util.Scanner;
-
 /**
  *
- * @author Crocospect
+ * @author Raka
  */
-public class JavaApplication8 {
-    
-    public static void main(String[] args) throws Exception {
+public class AplikasiKonsole {
+    public void MainMenu() throws Exception {
+        //public  void main(String[] args) throws Exception {
         
         Ruangan r1 = new Ruangan("Gold");
         Ruangan r2 = new Ruangan("Silver");
