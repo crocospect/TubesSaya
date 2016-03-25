@@ -5,6 +5,8 @@
  */
 package javaapplication8;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Crocospect
@@ -29,6 +31,31 @@ public class JavaApplication8 {
         PasienInap pi2;
         pi1 = new PasienInap(p1,d1);
         pi2 = new PasienInap(p2,d3);
+        
+        int pilih;
+        Scanner input = new Scanner (System.in);
+     
+        System.out.println("Pelayanan Rumah Sakit");
+        System.out.println("1. Pendaftaran Pasien");
+        System.out.println("2. Tambah Diagnosa");
+        System.out.println("3. Cari Pasien");
+        System.out.println("4. Lihat Daftar Pasien");
+        System.out.println("5. Hapus Data Pasien Inap");
+        System.out.print("Masukkan inputan ");
+        pilih = input.nextInt();
+        switch (pilih) {
+            case 1 :
+            {
+                System.out.println("Masukkan Id Pasien      : ");
+                System.out.println("Masukkan Nama           : ");
+                System.out.println("Masukkan Alamat         : ");
+                System.out.println("Masukkan Usia           : ");
+                System.out.println("Masukkan Nomor Hp       : ");
+                
+                
+            }
+        }
+        
         
     }
     
