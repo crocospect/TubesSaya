@@ -18,32 +18,42 @@ public class PasienInap {
     private ArrayList<String> diagnosa = new ArrayList();
     private int numOfDiagnosa = 0;
 
-    public long getId(){
+    public long getId() {
         return this.p.getId();
     }
+
     public PasienInap(pasien p, dokter d) {
         this.p = p;
         this.d = d;
     }
-    
+
     public void setDokter(dokter d) {
         this.d = d;
     }
 
     public void addDiagnosa(String d) {
-        if (numOfDiagnosa < diagnosa.size()) {
-            diagnosa.add(d);
-            System.out.println("Diagnosa ditambah");
-        } else {
-            System.out.println("Diagnosa penuh");
-        }
+        
+            diagnosa.add(d);    
     }
-    
-    public String getDiagnosa(int indeks){
+
+    public String getDiagnosa(int indeks) {
         return diagnosa.get(indeks);
     }
-    
-    public void deleteDiagnosa(int indeks){
+
+    public void deleteDiagnosa(int indeks) {
         diagnosa.remove(indeks);
+    }
+
+    public void display() {
+        System.out.println("Nama Pasien: " + p.getNama());
+        System.out.println("Id Pasien: " + p.getId());
+        System.out.println("Alamat pasien: " + p.getAlamat());
+        System.out.println("Usia pasien: " + p.getUsia());
+        System.out.println("Nomor pasien: " + p.getNomor());
+        System.out.println("Diagnosa: ");
+
+        for (int j = 0; j < diagnosa.size(); j++) {
+            System.out.println(diagnosa.get(j));
+        }
     }
 }

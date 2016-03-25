@@ -16,8 +16,8 @@ import javaapplication8.orang;
  */
 public class dokter extends orang{
 
-    public dokter(String nama, String alamat, int usia, long nomor) {
-        super(nama, alamat, usia, nomor);
+    public dokter(String nama) {
+        super(nama);
     }
     
 }
