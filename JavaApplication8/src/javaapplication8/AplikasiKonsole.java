@@ -40,16 +40,42 @@ public class AplikasiKonsole {
 
                         System.out.print("Masukkan Id Pasien      : ");
                         long id = input.nextLong();
-                        System.out.print("Masukkan Nama           : ");
-                        String nama = input.next();
-                        System.out.print("Masukkan Alamat         : ");
-                        String alamat = input.next();
-                        System.out.print("Masukkan Usia           : ");
-                        int usia = input.nextInt();
-                        System.out.print("Masukkan Nomor Hp       : ");
-                        long nomor = input.nextLong();
-                        System.out.print("Masukkan Nama Dokter  :");
-                        String nama_dokter = input.next();
+                        try {
+                            System.out.print("Masukkan Nama           : ");
+                            String nama = input.next();
+                            try {
+                                System.out.print("Masukkan Alamat         : ");
+                                String alamat = input.next();
+                                try {
+                                    System.out.print("Masukkan Usia           : ");
+                                    int usia = input.nextInt();
+                                    try {
+                                        System.out.print("Masukkan Nomor Hp       : ");
+                                        long nomor = input.nextLong();
+                                        try {
+                                            System.out.print("Masukkan Nama Dokter  :");
+                                            String nama_dokter = input.next();
+                                        } catch (Exception e) {
+                                            System.out.println("Inputkan tipe variabel String");
+                                            input.nextLine();
+                                        }
+                                    } catch (Exception e) {
+                                        System.out.println("Inputkan tipe variabel Long");
+                                        input.nextLine();
+                                    }
+                                } catch (Exception e) {
+                                    System.out.println("Inputkan tipe variabel Integer");
+                                    input.nextLine();
+                                }
+                            } catch (Exception e) {
+                                System.out.println("Inputkan tipe variabel String");
+                                input.nextLine();
+                            }
+                        } catch (Exception e) {
+                            System.out.println("Inputkan tipe variabel String");
+                            input.nextLine();
+                        }
+
                         System.out.println("Ruangan yang tersedia :");
                         System.out.print("1.");
                         r1.display();
@@ -61,7 +87,13 @@ public class AplikasiKonsole {
                         System.out.print("Ruangan yang dipilih :");
                         int kamar = input.nextInt();
 
-                        pasien p1 = new pasien(id, nama, alamat, usia, nomor);
+                        pasien p1;
+                        String nama = input.next();
+                        String alamat = input.next();
+                        int usia = input.nextInt();
+                        long nomor = input.nextLong();
+                        p1 = new pasien(id, nama, alamat, usia, nomor);
+                        String nama_dokter = input.next();
                         dokter d1 = new dokter(nama_dokter);
 
                         switch (kamar) {
@@ -79,100 +111,168 @@ public class AplikasiKonsole {
                             }
                         }
 
-                        System.out.print("apakah anda ingin lanjut? (Y/T) ");
-                        String pil_lan = input.next();
-                        if (pil_lan.equals("T")) {
-                            lanjut = false;
-                        }
-
                         break;
                     } catch (Exception e) {
-                        System.out.println("Inputan salah");
-                        break;
+                        System.out.println("Inputkan tipe variabel String");
+                        input.nextLine();
                     }
+                    System.out.print("apakah anda ingin lanjut? (Y/T) ");
+                    String pil_lan = input.next();
+                    if (pil_lan.equals("T")) {
+                        lanjut = false;
+                    }
+
+                    break;
+
                 case 2:
                     try {
                         System.out.println("Masukkan No. Ruangan :");
                         int no_ruang = input.nextInt();
-                        switch (no_ruang) {
-                            case 1: {
-
-                                System.out.println("Masukkan Id Pasien :");
-                                int x = input.nextInt();
-
-                                System.out.println("Masukkan diagnosa  :");
-                                String diagnosa = input.next();
-                                r1.getPasienInap(x).addDiagnosa(diagnosa);
-                                break;
-                            }
-                            case 2: {
-                                System.out.println("Masukkan Id Pasien :");
-                                int x = input.nextInt();
-
-                                System.out.println("Masukkan diagnosa  :");
-                                String diagnosa = input.next();
-                                r2.getPasienInap(x).addDiagnosa(diagnosa);
-                                break;
-                            }
-                            case 3: {
-                                System.out.println("Masukkan Id Pasien :");
-                                int x = input.nextInt();
-
-                                System.out.println("Masukkan diagnosa  :");
-                                String diagnosa = input.next();
-                                r3.getPasienInap(x).addDiagnosa(diagnosa);
-                                break;
-                            }
-                        }
-                        System.out.print("apakah anda ingin lanjut? (Y/T) ");
-                        String pil_lan = input.next();
-                        if (pil_lan.equals("T")) {
-                            lanjut = false;
-                        }
-                        break;
                     } catch (Exception e) {
-                        System.out.println("Inputan salah");
-                        break;
+                        System.out.println("Inputkan tipe variabel Integer");
+                        input.nextLine();
                     }
+
+                    int no_ruang = 0;
+                    switch (no_ruang) {
+                        case 1: {
+
+                            try {
+                                System.out.println("Masukkan Id Pasien :");
+                                int x = input.nextInt();
+                            } catch (Exception e) {
+                                System.out.println("Inputkan tipe variabel integer");
+                                input.nextLine();
+                            }
+
+                            try {
+                                System.out.println("Masukkan diagnosa  :");
+                                String diagnosa = input.next();
+                            } catch (Exception e) {
+                                System.out.println("Inputkan tipe variabel String");
+                                input.nextLine();
+                            }
+                            long x = 0;
+                            String diagnosa = null;
+                            r1.getPasienInap(x).addDiagnosa(diagnosa);
+                            break;
+                        }
+                        case 2: {
+                            try {
+                                System.out.println("Masukkan Id Pasien :");
+                                int x = input.nextInt();
+                            } catch (Exception e) {
+                                System.out.println("--");
+                                input.nextLine();
+                            }
+
+                            try {
+                                System.out.println("Masukkan diagnosa  :");
+                                String diagnosa = input.next();
+                            } catch (Exception e) {
+                                System.out.println("Inputkan tipe variabel String");
+                                input.nextLine();
+                            }
+                            long x = 0;
+                            String diagnosa = input.next();
+                            r2.getPasienInap(x).addDiagnosa(diagnosa);
+                            break;
+                        }
+                        case 3: {
+                            try {
+                                System.out.println("Masukkan Id Pasien :");
+                                int x = input.nextInt();
+                            } catch (Exception e) {
+                                System.out.println("--");
+                                input.nextLine();
+                            }
+
+                            try {
+                                System.out.println("Masukkan diagnosa  :");
+                                String diagnosa = input.next();
+                            } catch (Exception e) {
+                                System.out.println("Inputkan tipe variabel String");
+                                input.nextLine();
+                            }
+                            long x = 0;
+                            String diagnosa = input.next();
+                            r3.getPasienInap(x).addDiagnosa(diagnosa);
+                            break;
+                        }
+                    }
+            System.out.print("apakah anda ingin lanjut? (Y/T) ");
+            pil_lan = input.next();
+            if (pil_lan.equals("T")) {
+                lanjut = false;
+            }
+            break;
+        
+    
                 case 3:
                     try {
-                        System.out.println("Masukkan No. Ruangan :");
-                        int no_ruang = input.nextInt();
+                        System.out.print("Masukkan No. Ruangan :");
+                        no_ruang = input.nextInt();
+                    }catch (Exception e){
+                        System.out.println("Inputkan tipe variabel integer");
+                        input.nextLine();
+                    }
                         Ruangan r = null;
+                        no_ruang=input.nextInt();
                         switch (no_ruang) {
-                            case 1: {
-                                System.out.println("Masukkan Id Pasien :");
+                            case 1: try{
+                                System.out.print("Masukkan Id Pasien :");
                                 int x = input.nextInt();
+                            }catch (Exception e){
+                                System.out.println("Inputkan Integer");
+                                input.nextLine();
+                            }
+                                int x=input.nextInt();
                                 r1.getPasienInap(x).display();
                                 break;
+                            
+                            case 2: try{
+                                System.out.print("Masukkan Id Pasien :");
+                                 x = input.nextInt();
+                            }catch (Exception e){
+                                System.out.println("Inputkan Integer");
+                                input.nextLine();
                             }
-                            case 2: {
-                                System.out.println("Masukkan Id Pasien :");
-                                int x = input.nextInt();
+                                x = input.nextInt();
                                 r2.getPasienInap(x).display();
                                 break;
+                            
+                            case 3: try{
+                                System.out.print("Masukkan Id Pasien :");
+                                x = input.nextInt();
+                            }catch (Exception e){
+                                System.out.println("Inputkan Integer");
+                                input.nextLine();
                             }
-                            case 3: {
-                                System.out.println("Masukkan Id Pasien :");
-                                int x = input.nextInt();
+                                x = input.nextInt();
                                 r3.getPasienInap(x).display();
                                 break;
-                            }
+                            
                         }
+                        
                         System.out.print("apakah anda ingin lanjut? (Y/T) ");
-                        String pil_lan = input.next();
+                        pil_lan = input.next();
                         if (pil_lan.equals("T")) {
                             lanjut = false;
                         }
                         break;
-                    } catch (Exception e) {
-                        System.out.println("Inputan salah");
-                        break;
-                    }
-                case 4:
+                     
+                    
+    
+
+            case 4:
                     try {
-                        System.out.println("Masukkan No. Ruangan :");
-                        int no_ruang = input.nextInt();
+                        System.out.print("Masukkan No. Ruangan :");
+                        no_ruang = input.nextInt();
+                    }catch (Exception e){
+                        System.out.println("Inputkan tipe variabel integer");
+                        input.nextLine();
+                    }
+                        no_ruang=input.nextInt();
                         switch (no_ruang) {
                             case 1: {
                                 r1.diplay_pasien();
@@ -188,57 +288,73 @@ public class AplikasiKonsole {
                             }
                         }
                         System.out.print("apakah anda ingin lanjut? (Y/T) ");
-                        String pil_lan = input.next();
+                         pil_lan = input.next();
                         if (pil_lan.equals("T")) {
                             lanjut = false;
                         }
                         break;
-                    } catch (Exception e) {
-                        System.out.println("Inputan salah");
-                        break;
-                    }
+                   
                 case 5:
                     try {
                         System.out.println("=====Masukkan data pasien yang akan dihapus=====");
-                        System.out.println("Masukkan No. Ruangan :");
-                        int no_ruang = input.nextInt();
-                        Ruangan r = null;
+                        System.out.print("Masukkan No. Ruangan :");
+                        no_ruang = input.nextInt();
+                    }catch (Exception e){
+                        System.out.println("Inputkan integer");
+                        input.nextLine();
+                    }
+                        r = null;
+                        no_ruang=input.nextInt();
                         switch (no_ruang) {
-                            case 1: {
-                                System.out.println("Masukkan Id Pasien :");
+                            case 1: try{
+                                System.out.print("Masukkan Id Pasien :");
+                                int x = input.nextInt();
+                            }catch (Exception e){
+                                System.out.println("Inputkan integer");
+                                input.nextLine();
+                            }
                                 int x = input.nextInt();
                                 r1.removePasienInap(x);
                                 break;
-                            }
-                            case 2: {
+                            
+                            case 2: try{
                                 System.out.println("Masukkan Id Pasien :");
-                                int x = input.nextInt();
+                                x = input.nextInt();
+                            }catch (Exception e){
+                                System.out.println("Inputkan integer");
+                                input.nextLine();
+                            }
+                                x = input.nextInt();
                                 r2.removePasienInap(x);
                                 break;
-                            }
-                            case 3: {
+                            
+                            case 3: try{
                                 System.out.println("Masukkan Id Pasien :");
-                                int x = input.nextInt();
+                                x = input.nextInt();
+                                }catch (Exception e){
+                                System.out.println("Inputkan integer");
+                                input.nextLine();
+                            }
+                                x = input.nextInt();
                                 r3.removePasienInap(x);
                                 break;
-                            }
+                            
                         }
                         System.out.print("apakah anda ingin lanjut? (Y/T) ");
-                        String pil_lan = input.next();
+                        pil_lan = input.next();
                         if (pil_lan.equals("T")) {
                             lanjut = false;
                         }
                         break;
-                    } catch (Exception e) {
-                        System.out.println("Inputan salah");
-                        break;
-                    }
+                    
+                    
                 case 6:
                     try {
                         System.exit(0);
 
                     } catch (Exception e) {
                         System.out.println("Inputan salah");
+                        input.nextLine();
                         break;
                     }
             }
