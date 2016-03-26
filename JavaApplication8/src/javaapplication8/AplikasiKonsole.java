@@ -164,7 +164,7 @@ public class AplikasiKonsole {
                                 input.nextLine();
                             }
                             long x = 0;
-                            String diagnosa = null;
+                            String diagnosa = input.next();
                             r1.getPasienInap(x).addDiagnosa(diagnosa);
                             break;
                         }
