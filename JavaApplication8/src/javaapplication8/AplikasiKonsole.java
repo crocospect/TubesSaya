@@ -32,8 +32,14 @@ public class AplikasiKonsole {
             System.out.println("4. Lihat Daftar Pasien");
             System.out.println("5. Hapus Data Pasien Inap");
             System.out.println("6. Keluar");
-            System.out.print("Masukkan inputan ");
-            pilih = input.nextInt();
+            try{
+                System.out.print("Masukkan inputan ");
+                pilih = input.nextInt();
+            }catch (Exception e){
+                System.out.println("Inputkan integer");
+                input.nextLine();
+            }
+            pilih=input.nextInt();
             switch (pilih) {
                 case 1:
                     try {
@@ -84,9 +90,14 @@ public class AplikasiKonsole {
                         System.out.print("3.");
                         r3.display();
 
-                        System.out.print("Ruangan yang dipilih :");
+                        try {
+                            System.out.print("Ruangan yang dipilih :");
+                            int kamar = input.nextInt();
+                        }catch (Exception e){
+                            System.out.println("Inputkan integer");
+                            input.nextLine();
+                        }
                         int kamar = input.nextInt();
-
                         pasien p1;
                         String nama = input.next();
                         String alamat = input.next();
@@ -95,7 +106,7 @@ public class AplikasiKonsole {
                         p1 = new pasien(id, nama, alamat, usia, nomor);
                         String nama_dokter = input.next();
                         dokter d1 = new dokter(nama_dokter);
-
+                        
                         switch (kamar) {
                             case 1: {
                                 r1.tambahPasienInap(p1, d1);
@@ -111,7 +122,7 @@ public class AplikasiKonsole {
                             }
                         }
 
-                        break;
+            
                     } catch (Exception e) {
                         System.out.println("Inputkan tipe variabel String");
                         input.nextLine();
