@@ -86,12 +86,12 @@ public class AplikasiKonsole {
 
                 }
                 System.out.print("apakah anda ingin lanjut? (Y/T) ");
-                System.out.println("");
+                
                 String pil_lan = input.next();
                 if (pil_lan.equals("T")) {
                     lanjut = false;
                 }
-
+                System.out.println("");
                 break;
 
                 case 2: {
@@ -132,11 +132,11 @@ public class AplikasiKonsole {
 
                     }
                     System.out.print("apakah anda ingin lanjut? (Y/T) ");
-                    System.out.println("");
                     pil_lan = input.next();
                     if (pil_lan.equals("T")) {
                         lanjut = false;
                     }
+                    System.out.println("");
                 }
                 break;
 
@@ -171,11 +171,11 @@ public class AplikasiKonsole {
                     }
                 }
                 System.out.print("apakah anda ingin lanjut? (Y/T) ");
-                System.out.println("");
                 pil_lan = input.next();
                 if (pil_lan.equals("T")) {
                     lanjut = false;
                 }
+                System.out.println("");
                 break;
 
                 case 4: {
@@ -197,11 +197,11 @@ public class AplikasiKonsole {
                         }
                     }
                     System.out.print("apakah anda ingin lanjut? (Y/T) ");
-                    System.out.println("");
                     pil_lan = input.next();
                     if (pil_lan.equals("T")) {
                         lanjut = false;
                     }
+                    System.out.println("");
                     break;
                 }
 
@@ -235,11 +235,12 @@ public class AplikasiKonsole {
                         }
                     }
                     System.out.print("apakah anda ingin lanjut? (Y/T) ");
-                    System.out.println("");
+                    
                     pil_lan = input.next();
                     if (pil_lan.equals("T")) {
                         lanjut = false;
                     }
+                    System.out.println("");
                     break;
                 }
 
