@@ -63,11 +63,9 @@ public class AplikasiKonsole {
                     System.out.print("3.");
                     r3.display();
 
-                    
                     System.out.print("Ruangan yang dipilih :");
                     int kamar = input.nextInt();
-                    
-                  
+
                     pasien p1 = new pasien(id, nama, alamat, usia, nomor);
                     dokter d1 = new dokter(nama_dokter);
 
@@ -88,6 +86,7 @@ public class AplikasiKonsole {
 
                 }
                 System.out.print("apakah anda ingin lanjut? (Y/T) ");
+                System.out.println("");
                 String pil_lan = input.next();
                 if (pil_lan.equals("T")) {
                     lanjut = false;
@@ -95,7 +94,7 @@ public class AplikasiKonsole {
 
                 break;
 
-                case 2:{
+                case 2: {
 
                     System.out.println("Masukkan No. Ruangan :");
                     int no_ruang = input.nextInt();
@@ -110,8 +109,7 @@ public class AplikasiKonsole {
                             r1.getPasienInap(x).addDiagnosa(diagnosa);
                             break;
                         }
-                            
-                        
+
                         case 2: {
 
                             System.out.println("Masukkan Id Pasien :");
@@ -122,8 +120,7 @@ public class AplikasiKonsole {
                             r2.getPasienInap(x).addDiagnosa(diagnosa);
                             break;
                         }
-                            
-                        
+
                         case 3: {
 
                             System.out.println("Masukkan Id Pasien :");
@@ -132,17 +129,18 @@ public class AplikasiKonsole {
                             r3.getPasienInap(x).addDiagnosa(diagnosa);
                             break;
                         }
-                            
-                        
+
                     }
                     System.out.print("apakah anda ingin lanjut? (Y/T) ");
+                    System.out.println("");
                     pil_lan = input.next();
                     if (pil_lan.equals("T")) {
                         lanjut = false;
                     }
-                }break;
+                }
+                break;
 
-                case 3:{
+                case 3: {
 
                     System.out.print("Masukkan No. Ruangan :");
                     int no_ruang = input.nextInt();
@@ -156,8 +154,6 @@ public class AplikasiKonsole {
                             r1.getPasienInap(x).display();
                             break;
                         }
-                            
-                        
 
                         case 2: {
                             System.out.print("Masukkan Id Pasien :");
@@ -165,8 +161,7 @@ public class AplikasiKonsole {
                             r2.getPasienInap(x).display();
                             break;
                         }
-                            
-                        
+
                         case 3: {
                             System.out.print("Masukkan Id Pasien :");
                             int x = input.nextInt();
@@ -175,13 +170,13 @@ public class AplikasiKonsole {
                         }
                     }
                 }
-                        System.out.print("apakah anda ingin lanjut? (Y/T) ");
-                        pil_lan = input.next();
-                        if (pil_lan.equals("T")) {
-                            lanjut = false;
-                        }
-                        break;
-                    
+                System.out.print("apakah anda ingin lanjut? (Y/T) ");
+                System.out.println("");
+                pil_lan = input.next();
+                if (pil_lan.equals("T")) {
+                    lanjut = false;
+                }
+                break;
 
                 case 4: {
                     System.out.print("Masukkan No. Ruangan :");
@@ -202,6 +197,7 @@ public class AplikasiKonsole {
                         }
                     }
                     System.out.print("apakah anda ingin lanjut? (Y/T) ");
+                    System.out.println("");
                     pil_lan = input.next();
                     if (pil_lan.equals("T")) {
                         lanjut = false;
@@ -238,21 +234,19 @@ public class AplikasiKonsole {
                             break;
                         }
                     }
-                        System.out.print("apakah anda ingin lanjut? (Y/T) ");
-                        pil_lan = input.next();
-                        if (pil_lan.equals("T")) {
-                            lanjut = false;
-                        }
-                        break;
+                    System.out.print("apakah anda ingin lanjut? (Y/T) ");
+                    System.out.println("");
+                    pil_lan = input.next();
+                    if (pil_lan.equals("T")) {
+                        lanjut = false;
                     }
-                
-        
+                    break;
+                }
 
-            case 6:
-                    {
-                        System.exit(0);
-                        break;
-                    }
+                case 6: {
+                    System.exit(0);
+                    break;
+                }
             }
         }
     }
