@@ -14,6 +14,11 @@ import java.util.Scanner;
 public class Driver {
     public static void main(String[] args) throws Exception {
         AplikasiKonsole apk = new AplikasiKonsole();
-        apk.MainMenu();
+        try{
+            apk.MainMenu();
+        }catch (Exception e){
+            System.out.println("Terdapat kesalahan dalam input data");
+            apk.MainMenu();
+        }
     }
 }
