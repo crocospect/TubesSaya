@@ -5,7 +5,9 @@
  */
 package javaapplication8;
 
+import Model.Database;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 
 /**
  *
@@ -15,9 +17,25 @@ public class Ruangan {
 
     private ArrayList<PasienInap> daftarPasien = new ArrayList();
     private String nama;
+    private long id_ruangan;
+    Model.Database db = new Database();
 
     public Ruangan(String nama) {
-        this.nama = nama;
+        try{
+            db.connect();
+            this.nama = nama;
+            String query = "insert into Ruangan(nama_ruangan, id_ruangan) values ("
+                    +"'" +nama+"')";
+            db.execute(query);
+            db.close();
+        }catch(InputMismatchException e){
+            System.out.println("Input Salah");
+        }
+    }
+    
+    public Ruangan (String nama, long id){
+        this.nama=nama;
+        this.id_ruangan=id;
     }
 
     public void tambahPasienInap(pasien p, dokter d) {

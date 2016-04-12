@@ -15,9 +15,9 @@ public class AplikasiKonsole {
 
     public void MainMenu() throws Exception {
 
-        Ruangan r1 = new Ruangan("Gold");
-        Ruangan r2 = new Ruangan("Silver");
-        Ruangan r3 = new Ruangan("Bronze");
+        Ruangan r1 = new Ruangan("Gold",0001);
+        Ruangan r2 = new Ruangan("Silver",0002);
+        Ruangan r3 = new Ruangan("Bronze",0003);
 
         int pilih;
         boolean lanjut = true;
@@ -67,7 +67,7 @@ public class AplikasiKonsole {
                     int kamar = input.nextInt();
 
                     pasien p1 = new pasien(id, nama, alamat, usia, nomor);
-                    dokter d1 = new dokter(nama_dokter);
+                    dokter d1 = new dokter(nama_dokter,id);
 
                     switch (kamar) {
                         case 1: {

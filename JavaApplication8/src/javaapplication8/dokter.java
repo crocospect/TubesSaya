@@ -1,5 +1,7 @@
 package javaapplication8;
 
+import Model.Database;
+import java.util.InputMismatchException;
 import javaapplication8.orang;
 
 
@@ -14,8 +16,23 @@ import javaapplication8.orang;
  */
 public class dokter extends orang {
 
+    private long id_dokter;
+    Model.Database db = new Database(); 
     public dokter(String nama) {
         super(nama);
+        try{
+            db.connect();
+            String query = "insert into Dokter(nama_dokter) values ("
+                    +"'"+nama+"')";
+            db.execute(query);
+            db.close();
+        }catch(InputMismatchException e){
+            System.out.println("Input Salah");
+        }
     }
-
+    
+    public dokter(String nama, long id){
+        super(nama);
+        id_dokter = id; 
+    }
 }
