@@ -29,15 +29,8 @@ public class PasienInap {
             ResultSet rs = db.getData(query);
             diagnosa = new ArrayList<>();
             while (rs.next()) {
-                String di = rs.getString(1),rs.getString(2);
-                String query2 = "select*from dokter d, pasien p where p.id_dokter = d.id_dokter";
-                ResultSet rst = db.getData(query2);
-                while(rst.next()){
-                   dokter dok = new dokter(rs.getString(1),rs.getInt(2));
-                   PasienInap ps = new PasienInap(pi, dok);
-                   daftarPasien.add(ps);
-                   break;
-                }
+                String di = rs.getString(2);
+                diagnosa.add(di);
             }             
             db.close();
             }catch(Exception e){

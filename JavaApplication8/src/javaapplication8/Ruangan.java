@@ -21,19 +21,34 @@ public class Ruangan {
     private long id_ruangan;
     Model.Database db = new Database();
 
+    public void setDaftarPasien(ArrayList<PasienInap> daftarPasien) {
+        this.daftarPasien = daftarPasien;
+    }
+    
+
     public void loadAll(){
         try{
         db.connect();
             String query = "select*from pasien";
             ResultSet rs = db.getData(query);
+            
             daftarPasien = new ArrayList<PasienInap>();
             while (rs.next()) {
                 pasien pi = new pasien(rs.getString(1), rs.getString(2),rs.getInt(4),rs.getLong(5));
-                String query2 = "select*from dokter d, pasien p where p.id_dokter = d.id_dokter";
+                int i = rs.getInt(3);
+                String query2 = "select*from dokter d, pasien p where p.id_dokter = d.id_dokter and "
+                        + "p.id_pasien ="+i;
                 ResultSet rst = db.getData(query2);
                 while(rst.next()){
                    dokter dok = new dokter(rs.getString(1),rs.getInt(2));
                    PasienInap ps = new PasienInap(pi, dok);
+                   String query3 = "select *from diagnosa d, pasien p where p.id_pasien = d.id_pasien and "
+                           + "p.id_pasien ="+i;
+                   ResultSet rs1 = db.getData(query3);
+                   while (rs1.next()){
+                       String di = rs.getString(2);
+                       ps.addDiagnosa(di);
+                       }
                    daftarPasien.add(ps);
                    break;
                 }
