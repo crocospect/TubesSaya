@@ -6,6 +6,7 @@
 package javaapplication8;
 
 import Model.Database;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 
@@ -20,6 +21,27 @@ public class Ruangan {
     private long id_ruangan;
     Model.Database db = new Database();
 
+    public void loadAll(){
+        try{
+        db.connect();
+            String query = "select*from pasien";
+            ResultSet rs = db.getData(query);
+            daftarPasien = new ArrayList<PasienInap>();
+            while (rs.next()) {
+                pasien pi = new pasien(rs.getString(1), rs.getString(2),rs.getInt(4),rs.getLong(5));
+                String query2 = "select*from dokter d, pasien p where p.id_dokter = d.id_dokter";
+                ResultSet rst = db.getData(query2);
+                while(rst.next()){
+                   dokter dok = new dokter(rs.getString(1),rs.getInt(2));
+                   PasienInap ps = new PasienInap(pi, dok);
+                   daftarPasien.add(ps);
+                   break;
+                }
+            }             
+            db.close();
+            }catch(Exception e){
+        }
+    }
     public Ruangan(String nama) {
         try{
             db.connect();

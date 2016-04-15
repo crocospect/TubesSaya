@@ -16,7 +16,7 @@ import javaapplication8.orang;
  */
 public class dokter extends orang {
 
-    private long id_dokter;
+    private int id_dokter;
     Model.Database db = new Database(); 
     public dokter(String nama) {
         super(nama);
@@ -31,7 +31,7 @@ public class dokter extends orang {
         }
     }
     
-    public dokter(String nama, long id){
+    public dokter(String nama, int id){
         super(nama);
         id_dokter = id; 
     }

@@ -5,6 +5,8 @@
  */
 package javaapplication8;
 
+import Model.Database;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 
 /**
@@ -13,11 +15,34 @@ import java.util.ArrayList;
  */
 public class PasienInap {
 
+    Database db = new Database();
     private pasien p;
     private dokter d;
     private ArrayList<String> diagnosa = new ArrayList();
     private int numOfDiagnosa = 0;
 
+    
+    public void loadAll(){
+        try{
+        db.connect();
+            String query = "select*from diagnosa where id_pasien= "+p.getId();
+            ResultSet rs = db.getData(query);
+            diagnosa = new ArrayList<>();
+            while (rs.next()) {
+                String di = rs.getString(1),rs.getString(2);
+                String query2 = "select*from dokter d, pasien p where p.id_dokter = d.id_dokter";
+                ResultSet rst = db.getData(query2);
+                while(rst.next()){
+                   dokter dok = new dokter(rs.getString(1),rs.getInt(2));
+                   PasienInap ps = new PasienInap(pi, dok);
+                   daftarPasien.add(ps);
+                   break;
+                }
+            }             
+            db.close();
+            }catch(Exception e){
+        }
+    }
     public long getId() {
         return this.p.getId();
     }
