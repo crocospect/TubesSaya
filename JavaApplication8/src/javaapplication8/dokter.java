@@ -31,7 +31,7 @@ public class dokter extends orang {
         }
     }
     
-    public dokter(String nama, int id){
+    public dokter( int id, String nama){
         super(nama);
         id_dokter = id; 
     }

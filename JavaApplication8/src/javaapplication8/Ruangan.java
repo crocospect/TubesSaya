@@ -40,7 +40,7 @@ public class Ruangan {
                         + "p.id_pasien ="+i;
                 ResultSet rst = db.getData(query2);
                 while(rst.next()){
-                   dokter dok = new dokter(rs.getString(1),rs.getInt(2));
+                   dokter dok = new dokter(rs.getInt(1),rs.getString(2));
                    PasienInap ps = new PasienInap(pi, dok);
                    String query3 = "select *from diagnosa d, pasien p where p.id_pasien = d.id_pasien and "
                            + "p.id_pasien ="+i;

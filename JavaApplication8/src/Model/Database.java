@@ -38,7 +38,6 @@ public class Database {
             ResultSet r1 = getData(query1);
             while (r1.next()) {
                 Ruangan ruang1 = new Ruangan(r1.getString(1),r1.getInt(2));
-                
                 int x = r1.getInt(2);
                 String query = "select *from pasien p, ruangan r where p.id_ruangan ="+x;
                 ResultSet rs = getData(query);
@@ -49,7 +48,7 @@ public class Database {
                     String query2 = "select*from dokter d, pasien p where p.id_dokter = d.id_dokter and p.id_pasien ="+i;
                     ResultSet rst = getData(query2);
                     while (rst.next()) {
-                        dokter dok = new dokter(rs.getString(1), rs.getInt(2));
+                        dokter dok = new dokter(rs.getInt(1), rs.getString(2));
                         PasienInap ps = new PasienInap(pi, dok);
                         String query3 = "select *from diagnosa d, pasien p where p.id_pasien = d.id_pasien and p.id_pasien ="+i;
                         ResultSet rs1 = getData(query3);
