@@ -6,7 +6,7 @@
 package Control;
 
 import Model.Database;
-import View.inputdatapasien;
+import View.PendaftaranPasien;
 import java.util.ArrayList;
 
 /**
@@ -17,13 +17,13 @@ public class c_inputpasien {
     
     Database db = new Model.Database();
     ArrayList<Model.Database> listpasien;
-    View.inputdatapasien idp;
+    View.PendaftaranPasien idp;
 
     public void setListpasien(ArrayList<Database> listpasien) {
         this.listpasien = listpasien;
     }
 
-    public void setIdp(inputdatapasien idp) {
+    public void setIdp(PendaftaranPasien idp) {
         this.idp = idp;
     }
     

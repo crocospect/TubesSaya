@@ -5,15 +5,17 @@
  */
 package View;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author Raka
  */
 public class home extends javax.swing.JFrame {
-inputdatapasien idp;
-caripasien cp;
-hpsdatapasien hdp;
-lhtdatapasien ldp;
+PendaftaranPasien idp;
+CariPasien cp;
+HapusDataPasien hdp;
+LihatDataPasien ldp;
 
     /**
      * Creates new form JFrame1
@@ -115,7 +117,7 @@ lhtdatapasien ldp;
                         .addGap(72, 72, 72))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addGap(114, 114, 114))))
+                        .addGap(126, 126, 126))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,71 +149,59 @@ lhtdatapasien ldp;
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDaftarActionPerformed
-        idp = new inputdatapasien();
-        idp.setVisible(true);
-        this.dispose();
+        
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDaftarActionPerformed
 
     private void btnCariPasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariPasienActionPerformed
-        cp = new caripasien();
-        cp.setVisible(true);
+        
         
 // TODO add your handling code here:
     }//GEN-LAST:event_btnCariPasienActionPerformed
 
     private void btnHapusPasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusPasienActionPerformed
-        hdp = new hpsdatapasien();
-        hdp.setVisible(true);
+    
         // TODO add your handling code here:
     }//GEN-LAST:event_btnHapusPasienActionPerformed
 
     private void btnLihatDaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLihatDaftarActionPerformed
-        ldp = new lhtdatapasien();
-        ldp.setVisible(true);
+    
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLihatDaftarActionPerformed
 
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
-        System.exit(0);
+        
         // TODO add your handling code here:
     }//GEN-LAST:event_btnKeluarActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new home().setVisible(true);
-            }
-        });
+    public JButton getBtnCariPasien() {
+        return btnCariPasien;
     }
+
+    public JButton getBtnDaftar() {
+        return btnDaftar;
+    }
+
+    public JButton getBtnHapusPasien() {
+        return btnHapusPasien;
+    }
+
+    public JButton getBtnKeluar() {
+        return btnKeluar;
+    }
+
+    public JButton getBtnLihatDaftar() {
+        return btnLihatDaftar;
+    }
+
+    public JButton getBtnTmbhDiagnosa() {
+        return btnTmbhDiagnosa;
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCariPasien;
