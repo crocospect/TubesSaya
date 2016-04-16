@@ -23,11 +23,13 @@ public class testesan {
             String query1 = "select *from ruangan";
             ResultSet r1 = db.getData(query1);
             System.out.println(ruang.toString());
-//            while (r1.next()) {
-//                Ruangan ruang1 = new Ruangan(r1.getString(1),r1.getInt(2));
-//                int x = r1.getInt(2);
-//                String query = "select *from pasien p, ruangan r where p.id_ruangan ="+x;
-//                ResultSet rs = db.getData(query);
+            while (r1.next()) {
+                Ruangan ruang1 = new Ruangan(r1.getString(1),r1.getInt(2));
+                int x = r1.getInt(2);
+                String query = "select *from pasien p, ruangan r where p.id_ruangan ="+x;
+                ResultSet rs = db.getData(query);
+                System.out.println(ruang1.toString());
+          }
 //                ArrayList<PasienInap> daftarPasien = new ArrayList<PasienInap>();
 //                while (rs.next()) {
 //                    pasien pi = new pasien(rs.getString(1), rs.getString(2), rs.getInt(4), rs.getLong(5));
