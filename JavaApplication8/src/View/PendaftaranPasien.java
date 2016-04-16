@@ -13,7 +13,10 @@ import javax.swing.JButton;
  * @author Raka
  */
 public class PendaftaranPasien extends javax.swing.JFrame {
-home ho;
+
+    public PendaftaranPasien() {
+        initComponents();
+    }
     /**
      * Creates new form JFrame2
      */

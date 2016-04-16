@@ -12,17 +12,14 @@ import javax.swing.JButton;
  * @author Raka
  */
 public class home extends javax.swing.JFrame {
-PendaftaranPasien idp;
-CariPasien cp;
-HapusDataPasien hdp;
-LihatDataPasien ldp;
 
-    /**
-     * Creates new form JFrame1
-     */
     public home() {
         initComponents();
     }
+    /**
+     * Creates new form JFrame1
+     */
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -214,6 +211,8 @@ LihatDataPasien ldp;
     public JButton getBtnTmbhDiagnosa() {
         return btnTmbhDiagnosa;
     }
+
+    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -20,6 +20,9 @@ public class ControllHapus implements ActionListener{
     public ControllHapus(){
         hapus = new HapusDataPasien();
         hapus.setVisible(true);
+        hapus.getBtnExit().addActionListener(this);
+        hapus.getBtnHapus().addActionListener(this);
+        hapus.getBtnHome().addActionListener(this);
     }
     
     @Override

@@ -13,6 +13,9 @@ import javax.swing.JButton;
  */
 public class HapusDataPasien extends javax.swing.JFrame {
 
+    public HapusDataPasien() {
+        initComponents();
+    }
     /**
      * Creates new form JFrame5
      */

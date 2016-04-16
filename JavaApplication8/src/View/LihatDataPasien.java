@@ -13,6 +13,9 @@ import javax.swing.JButton;
  */
 public class LihatDataPasien extends javax.swing.JFrame {
 
+    public LihatDataPasien() {
+        initComponents();
+    }
     /**
      * Creates new form JFrame4
      */

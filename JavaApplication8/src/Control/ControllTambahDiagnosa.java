@@ -19,6 +19,9 @@ public class ControllTambahDiagnosa implements ActionListener{
     public ControllTambahDiagnosa(){
         tambahdiagnosa = new TambahDiagnosa();
         tambahdiagnosa.setVisible(true);
+        tambahdiagnosa.getBtnTambahDiagnosa().addActionListener(this);
+        tambahdiagnosa.getBtnHome().addActionListener(this);
+        tambahdiagnosa.getBtnExit().addActionListener(this);
     }
 
     @Override

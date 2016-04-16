@@ -20,6 +20,8 @@ public class ControllLihatDaftar implements ActionListener{
         lihatdata = new LihatDataPasien();
         lihatdata.setVisible(true);
         lihatdata.getBtnCari().addActionListener(this);
+        lihatdata.getBtnExit().addActionListener(this);
+        lihatdata.getBtnHome().addActionListener(this);
     }
 
     @Override
