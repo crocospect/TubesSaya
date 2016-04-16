@@ -28,7 +28,13 @@ public class ControllTambahDiagnosa implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         Object o = e.getSource();
         if (o.equals(tambahdiagnosa.getBtnTambahDiagnosa())){
+            new ControllTambahDiagnosa();
+            tambahdiagnosa.dispose();
+        } else if(o.equals(tambahdiagnosa.getBtnHome())){
             new ControllHome();
+            tambahdiagnosa.dispose();
+        } else if(o.equals(tambahdiagnosa.getBtnExit())){
+            new ControllKeluar();
             tambahdiagnosa.dispose();
         }
     }
