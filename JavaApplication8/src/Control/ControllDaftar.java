@@ -18,6 +18,9 @@ public class ControllDaftar implements ActionListener {
     public ControllDaftar(){
         daftar = new PendaftaranPasien();
         daftar.setVisible(true);
+        daftar.getBtnMasuk().addActionListener(this);
+        daftar.getBtnHome().addActionListener(this);
+        daftar.getBtnExit().addActionListener(this);
     }
     
     @Override
