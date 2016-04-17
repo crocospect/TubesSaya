@@ -45,8 +45,13 @@ public class PasienInap {
         this.d = d;
     }
 
-    public void setDokter(dokter d) {
+    public void setDokter(long idpasien) {
+        db.connect();
+        
+        String query1 = "update pasien set id_dokter = " + d.getId_dokter()+ " where id_pasien = "+idpasien;
         this.d = d;
+        db.execute(query1);
+        db.close();
     }
 
     public void addDiagnosa(String d) {

@@ -31,32 +31,32 @@ public class Ruangan {
         try{
         db.connect();
             String query = "select*from pasien";
-            ResultSet rs = db.getData(query);
-            
-            daftarPasien = new ArrayList<PasienInap>();
-            while (rs.next()) {
-                pasien pi = new pasien(rs.getString(1), rs.getString(2),rs.getInt(4),rs.getLong(5));
-                int i = rs.getInt(3);
+            ResultSet r1 = db.getData(query);
+
+            ArrayList<PasienInap> daftarPasien = new ArrayList<>();
+            while (r1.next()) {
+                pasien pi = new pasien(r1.getString(1), r1.getString(2), r1.getInt(4), r1.getLong(5));
+                int i = r1.getInt(3);
                 String query2 = "select*from dokter d, pasien p where p.id_dokter = d.id_dokter and "
-                        + "p.id_pasien ="+i;
-                ResultSet rst = db.getData(query2);
-                while(rst.next()){
-                   dokter dok = new dokter(rs.getInt(1),rs.getString(2));
-                   PasienInap ps = new PasienInap(pi, dok);
-                   String query3 = "select *from diagnosa d, pasien p where p.id_pasien = d.id_pasien and "
-                           + "p.id_pasien ="+i;
-                   ResultSet rs1 = db.getData(query3);
-                   while (rs1.next()){
-                       String di = rs.getString(2);
-                       ps.addDiagnosa(di);
-                       }
-                   daftarPasien.add(ps);
-                   break;
+                        + "p.id_pasien =" + i;
+                ResultSet r2 = db.getData(query2);
+                while (r2.next()) {
+                    dokter dok = new dokter(r2.getInt(1), r2.getString(2));
+                    PasienInap ps = new PasienInap(pi, dok);
+                    String query3 = "select *from diagnosa d, pasien p where p.id_pasien = d.id_pasien and "
+                            + "p.id_pasien =" + i;
+                    ResultSet r3 = db.getData(query3);
+                    while (r3.next()) {
+                        String di = r3.getString(2);
+                        ps.addDiagnosa(di);
+                    }
+                    daftarPasien.add(ps);
+                    break;
                 }
-            }             
+            }
             db.close();
-            }catch(Exception e){
-        }
+        } catch (Exception e) {
+       }
     }
     public Ruangan(String nama) {
         try{
