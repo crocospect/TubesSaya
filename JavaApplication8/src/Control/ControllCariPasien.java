@@ -5,7 +5,7 @@
  */
 package Control;
 
-import View.CariPasien;
+import View.caripasien;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -14,24 +14,24 @@ import java.awt.event.ActionListener;
  * @author Raka
  */
 public class ControllCariPasien implements ActionListener{
-    CariPasien caripasien;
+    caripasien carip;
 
     public ControllCariPasien(){
-        caripasien = new CariPasien();
-        caripasien.setVisible(true);
-        caripasien.getBtnCari().addActionListener(this);
-        caripasien.getBtnHome().addActionListener(this);
+        carip = new caripasien();
+        carip.setVisible(true);
+        carip.getBtnCari().addActionListener(this);
+        carip.getBtnHome().addActionListener(this);
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
         Object o = e.getSource();
-        if (e.equals(caripasien.getBtnCari())){
+        if (e.equals(carip.getBtnCari())){
             new ControllDapatPasien();
-            caripasien.dispose();
-        } else if (e.equals(caripasien.getBtnHome())){
+            carip.dispose();
+        } else if (e.equals(carip.getBtnHome())){
             new ControllHome();
-            caripasien.dispose();
+            carip.dispose();
         }
     }
     
