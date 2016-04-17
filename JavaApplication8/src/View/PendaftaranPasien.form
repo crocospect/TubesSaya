@@ -63,8 +63,12 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="btnHome" min="-2" max="-2" attributes="0"/>
                               <Component id="btnMasuk" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="btnHome" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="161" max="32767" attributes="0"/>
+                                  <Component id="BtnExit" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -130,7 +134,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="79" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -193,7 +197,10 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="btnMasuk" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btnHome" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btnHome" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="BtnExit" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -303,6 +310,14 @@
         <Component class="javax.swing.JTextField" name="IDdokter">
         </Component>
         <Component class="javax.swing.JTextField" name="NamaDokter">
+        </Component>
+        <Component class="javax.swing.JButton" name="BtnExit">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Keluar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnExitActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

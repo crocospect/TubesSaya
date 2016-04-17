@@ -58,6 +58,7 @@ public class PendaftaranPasien extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         IDdokter = new javax.swing.JTextField();
         NamaDokter = new javax.swing.JTextField();
+        BtnExit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -102,6 +103,13 @@ public class PendaftaranPasien extends javax.swing.JFrame {
 
         jLabel15.setText("Masukkan ID  Dokter");
 
+        BtnExit.setText("Keluar");
+        BtnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnExitActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -119,8 +127,11 @@ public class PendaftaranPasien extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(109, 109, 109)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnHome)
-                            .addComponent(btnMasuk)))
+                            .addComponent(btnMasuk)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(btnHome)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 161, Short.MAX_VALUE)
+                                .addComponent(BtnExit))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(73, 73, 73)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -167,7 +178,7 @@ public class PendaftaranPasien extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGap(42, 42, 42)
                                 .addComponent(NoHpField, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addGap(41, 41, 41))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,7 +231,9 @@ public class PendaftaranPasien extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnMasuk)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnHome)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnHome)
+                    .addComponent(BtnExit))
                 .addGap(0, 11, Short.MAX_VALUE))
         );
 
@@ -246,6 +259,11 @@ public class PendaftaranPasien extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnHomeActionPerformed
 
+    private void BtnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnExitActionPerformed
+        System.exit(0);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnExitActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -253,6 +271,9 @@ public class PendaftaranPasien extends javax.swing.JFrame {
 
     public JButton getBtnHome() {
         return btnHome;
+    }
+    public JButton getBtnExit(){
+        return BtnExit;
     }
 
     public JTextField getIDField() {
@@ -298,6 +319,7 @@ public class PendaftaranPasien extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField AlamatField;
+    private javax.swing.JButton BtnExit;
     private javax.swing.JTextField IDField;
     private javax.swing.JTextField IDKamar;
     private javax.swing.JTextField IDdokter;
