@@ -20,7 +20,6 @@ public class ControllLihatDaftar implements ActionListener{
         lihatdata = new LihatDataPasien();
         lihatdata.setVisible(true);
         lihatdata.getBtnCari().addActionListener(this);
-        lihatdata.getBtnExit().addActionListener(this);
         lihatdata.getBtnHome().addActionListener(this);
     }
 
@@ -32,9 +31,6 @@ public class ControllLihatDaftar implements ActionListener{
             lihatdata.dispose();
         }else if (o.equals(lihatdata.getBtnHome())){
             new ControllHome();
-            lihatdata.dispose();
-        }else if (o.equals(lihatdata.getBtnExit())){
-            new ControllKeluar();
             lihatdata.dispose();
         }
     }

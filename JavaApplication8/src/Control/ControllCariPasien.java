@@ -21,7 +21,6 @@ public class ControllCariPasien implements ActionListener{
         caripasien.setVisible(true);
         caripasien.getBtnCari().addActionListener(this);
         caripasien.getBtnHome().addActionListener(this);
-        caripasien.getBtnExit().addActionListener(this);
     }
     
     @Override
@@ -32,9 +31,6 @@ public class ControllCariPasien implements ActionListener{
             caripasien.dispose();
         } else if (e.equals(caripasien.getBtnHome())){
             new ControllHome();
-            caripasien.dispose();
-        }else if (e.equals(caripasien.getBtnExit())){
-            new ControllKeluar();
             caripasien.dispose();
         }
     }

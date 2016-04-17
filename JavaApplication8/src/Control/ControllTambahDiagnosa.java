@@ -21,7 +21,6 @@ public class ControllTambahDiagnosa implements ActionListener{
         tambahdiagnosa.setVisible(true);
         tambahdiagnosa.getBtnTambahDiagnosa().addActionListener(this);
         tambahdiagnosa.getBtnHome().addActionListener(this);
-        tambahdiagnosa.getBtnExit().addActionListener(this);
     }
 
     @Override
@@ -33,9 +32,6 @@ public class ControllTambahDiagnosa implements ActionListener{
         } else if(o.equals(tambahdiagnosa.getBtnHome())){
             new ControllHome();
             tambahdiagnosa.dispose();
-        } else if(o.equals(tambahdiagnosa.getBtnExit())){
-            new ControllKeluar();
-            tambahdiagnosa.dispose();
-        }
+        } 
     }
 }

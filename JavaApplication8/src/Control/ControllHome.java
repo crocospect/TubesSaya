@@ -31,7 +31,7 @@ public class ControllHome implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         Object o = e.getSource();
         if (o.equals(home.getBtnDaftar())){
-            new ControllDaftar();
+            new ControllPendaftaran();
             home.dispose();
         }else if (o.equals(home.getBtnTmbhDiagnosa())){
             new ControllTambahDiagnosa();
