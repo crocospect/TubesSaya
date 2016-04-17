@@ -31,6 +31,7 @@ public class ControllPendaftaran implements ActionListener {
         }else if(o.equals(daftar.getBtnMasuk())){
             new ControllPendaftaran();
             daftar.dispose();
+            
         }
     }
 }

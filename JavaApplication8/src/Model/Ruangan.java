@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication8;
+package Model;
 
+import Model.PasienInap;
 import Model.Database;
 import java.sql.ResultSet;
 import java.util.ArrayList;

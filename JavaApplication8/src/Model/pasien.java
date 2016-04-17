@@ -1,4 +1,4 @@
-package javaapplication8;
+package Model;
 
 import Model.Database;
 import java.util.InputMismatchException;

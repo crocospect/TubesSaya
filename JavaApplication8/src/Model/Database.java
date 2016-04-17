@@ -11,10 +11,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import javaapplication8.PasienInap;
-import javaapplication8.Ruangan;
-import javaapplication8.dokter;
-import javaapplication8.pasien;
 import javax.swing.JOptionPane;
 
 /**

@@ -1,8 +1,8 @@
-package javaapplication8;
+package Model;
 
 import Model.Database;
 import java.util.InputMismatchException;
-import javaapplication8.orang;
+import Model.orang;
 
 
 /*
