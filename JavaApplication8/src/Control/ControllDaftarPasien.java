@@ -27,6 +27,7 @@ public class ControllDaftarPasien implements ActionListener{
         Object o = e.getSource();
         if (o.equals(data.getBtnKembali())){
             new ControllLihatDaftar();
+            
             data.dispose();
         }
     }

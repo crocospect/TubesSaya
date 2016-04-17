@@ -26,7 +26,8 @@ public class percobaan {
 
             ArrayList<PasienInap> daftarPasien = new ArrayList<>();
             while (r1.next()) {
-                pasien pi = new pasien(r1.getString(1), r1.getString(2), r1.getInt(4), r1.getLong(5));
+                pasien pi = new pasien(r1.getString("nama"), r1.getString("alamat"),
+                        r1.getInt("usia"), r1.getLong("nomorhp"));
                 int i = r1.getInt(3);
                 String query2 = "select*from dokter d, pasien p where p.id_dokter = d.id_dokter and "
                         + "p.id_pasien =" + i;

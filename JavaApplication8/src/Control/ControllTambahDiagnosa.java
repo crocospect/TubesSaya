@@ -5,9 +5,11 @@
  */
 package Control;
 
+import Model.pasien;
 import View.TambahDiagnosa;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import static java.lang.Integer.parseInt;
 
 /**
  *
@@ -27,7 +29,7 @@ public class ControllTambahDiagnosa implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         Object o = e.getSource();
         if (o.equals(tambahdiagnosa.getBtnTambahDiagnosa())){
-            new ControllTambahDiagnosa();
+            new ControllTambahDiagnosa();       
             tambahdiagnosa.dispose();
         } else if(o.equals(tambahdiagnosa.getBtnHome())){
             new ControllHome();

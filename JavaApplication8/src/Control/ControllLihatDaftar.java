@@ -27,7 +27,7 @@ public class ControllLihatDaftar implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         Object o = e.getSource();
         if (o.equals(lihatdata.getBtnCari())){
-            new ControllLihatDaftar();
+            new ControllDaftarPasien();
             lihatdata.dispose();
         }else if (o.equals(lihatdata.getBtnHome())){
             new ControllHome();

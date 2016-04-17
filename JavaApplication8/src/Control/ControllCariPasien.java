@@ -27,7 +27,7 @@ public class ControllCariPasien implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         Object o = e.getSource();
         if (e.equals(caripasien.getBtnCari())){
-            new ControllCariPasien();
+            new ControllDapatPasien();
             caripasien.dispose();
         } else if (e.equals(caripasien.getBtnHome())){
             new ControllHome();

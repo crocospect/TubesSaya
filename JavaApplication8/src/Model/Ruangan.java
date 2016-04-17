@@ -59,16 +59,7 @@ public class Ruangan {
        }
     }
     public Ruangan(String nama) {
-        try{
-            db.connect();
             this.nama = nama;
-            String query = "insert into Ruangan(nama_ruangan, id_ruangan) values ("
-                    +"'" +nama+"')";
-            db.execute(query);
-            db.close();
-        }catch(InputMismatchException e){
-            System.out.println("Input Salah");
-        }
     }
     
     public Ruangan (String nama, long id){

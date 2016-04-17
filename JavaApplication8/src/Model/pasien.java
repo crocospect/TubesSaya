@@ -27,7 +27,6 @@ public class pasien extends orang{
                     + "values ('"
                     + nama +"',"
                     +alamat+","
-                    
                     +usia+","
                     +nomor+"')";
                     ;
