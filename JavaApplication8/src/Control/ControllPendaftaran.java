@@ -5,6 +5,7 @@
  */
 package Control;
 
+import Model.Database;
 import View.PendaftaranPasien;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -37,9 +38,12 @@ public class ControllPendaftaran implements ActionListener {
             daftar.dispose();
         } else if (o.equals(daftar.getBtnMasuk())) {
             new ControllPendaftaran();
+            Database db = new Database();
+            db.connect();
             pasien p = new pasien(daftar.getNamaPasField().getText(), daftar.getAlamatField().getText(), parseInt(daftar.getUsiaField().getText()), parseLong(daftar.getNoHpField().getText()));
             dokter d = new dokter(parseInt(daftar.getIDdokter().getText()), daftar.getNamaDokter().getText());
             PasienInap PI = new PasienInap(p, d);
+            db.close();
             daftar.dispose();
 
         }
